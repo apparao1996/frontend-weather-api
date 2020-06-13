@@ -23,10 +23,7 @@ getWeather(location).then(weather=>{
     
     document.getElementById("showPlace").innerHTML=weather.name+","+weather.sys.country;
 
-    const week=["sunday","monday","tuesday","wednesday","thursday","friday","saturday"];
-    const date=new Date();
-
-    document.getElementById("showDayAndTime").innerHTML= date.getHours()+"/"+date.getMinutes()+"/"+date.getSeconds()+","+week[date.getDay()];
+    time();
     
     
     document.getElementById("showWeather").innerHTML=weather.weather[0].description;
@@ -38,6 +35,15 @@ getWeather(location).then(weather=>{
 });
 
 
+}
+function time(){
+    const week=["sunday","monday","tuesday","wednesday","thursday","friday","saturday"];
+    const date=new Date();
+
+   
+    document.getElementById("showDayAndTime").innerHTML= date.getHours()+"/"+date.getMinutes()+"/"+date.getSeconds()+","+week[date.getDay()];
+    
+    setInterval(time,500);
 }
 
 
