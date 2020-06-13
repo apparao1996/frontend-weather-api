@@ -43,17 +43,21 @@
   #pp{
       color: black;
   }
-  #show{
+  #showTemperature{
       color: black;
       font-size: xx-large;
   }
-  #show1,#show3{
+  #showWeather{
       color: black;
       font-size: medium;
   }
-  #show2{
+  #showPlace{
       color: black;
       font-size: xx-large;
+  }
+  #showDayAndTime{
+      color : black;
+      font-size :xx-large;
   }
   #tt{
       margin-left: 20%;
